@@ -64,6 +64,7 @@ class Search extends React.Component {
         <div className="Search-result-container">
           {searchResults.map((result) => (
             <Link
+              style={{ textDecoration: "none" }}
               to={{
                 pathname: "/currency/" + result.id,
               }}
@@ -71,7 +72,7 @@ class Search extends React.Component {
               onClick={() => this.handleRedirect(result.id)}
             >
               {console.log(result.id)}
-              <div className="Search-result">
+              <div className="Search-result ">
                 {result.name} ({result.symbol})
               </div>
             </Link>

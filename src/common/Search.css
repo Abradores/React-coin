@@ -55,6 +55,7 @@
 }
 
 .Search-result-container {
+  color: white;
   position: relative;
   width: 100%;
   max-height: 299px;
@@ -65,8 +66,15 @@
   box-shadow: 0px 0px 40px 0px#1f364d;
   margin-top: 10px;
 }
+.Search-result-container a,
+.Search-no-result a {
+  color: transparent;
+  -moz-text-decoration-color: transparent !important;
+  text-decoration-color: transparent !important;
+}
 .Search-result-container::-webkit-scrollbar {
   display: none;
+  color: white;
 }
 
 .Search-result {
