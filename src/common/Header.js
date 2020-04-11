@@ -8,7 +8,7 @@ export class Header extends Component {
   render() {
     return (
       <div className="Header">
-        <Link to="/">
+        <Link to="/" style={{textDecoration: 'none'}}>
           <img src={logo} alt="LogoHeader" className="Header-logo" />
           <Search />
         </Link>

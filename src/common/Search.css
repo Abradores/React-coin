@@ -65,13 +65,14 @@
   border-radius: 4px;
   box-shadow: 0px 0px 40px 0px#1f364d;
   margin-top: 10px;
+  scrollbar-width: none;
 }
-.Search-result-container a,
-.Search-no-result a {
+.Search-result-container a {
   color: transparent;
   -moz-text-decoration-color: transparent !important;
   text-decoration-color: transparent !important;
 }
+/* Chrome hide scrollbar = Mozilla is required inline in Search.js */
 .Search-result-container::-webkit-scrollbar {
   display: none;
   color: white;

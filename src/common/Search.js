@@ -61,7 +61,7 @@ class Search extends React.Component {
 
     if (searchResults.length > 0) {
       return (
-        <div className="Search-result-container">
+        <div className="Search-result-container" style={{scrollbarWidth: 'none'}}>
           {searchResults.map((result) => (
             <Link
               style={{ textDecoration: "none" }}
@@ -83,7 +83,7 @@ class Search extends React.Component {
 
     if (!loading) {
       return (
-        <div className="Search-result-container">
+        <div className="Search-result-container" style={{scrollbarWidth: 'none'}}>
           <div className="Search-no-result">No results found.</div>
         </div>
       );
