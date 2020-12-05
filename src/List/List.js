@@ -13,14 +13,14 @@ export class List extends Component {
       array1: [],
       error: null,
       totalPages: 0,
-      page: 1
+      page: 1,
     };
   }
   componentDidMount() {
     this.FetchCurrencies();
   }
 
-  HandlePaginationClick = direction => {
+  HandlePaginationClick = (direction) => {
     let NextPage = this.state.page;
     if (direction === "next") {
       NextPage++;
@@ -36,16 +36,16 @@ export class List extends Component {
 
     fetch(API_URL + "/cryptocurrencies?page=" + page + "&perPage=20")
       .then(handleResponse)
-      .then(data => {
+      .then((data) => {
         const { currencies, totalPages } = data;
         this.setState({
           array1: currencies,
           totalPages: totalPages,
-          loading: false
+          loading: false,
         });
         console.log("Success", data);
       })
-      .catch(error => {
+      .catch((error) => {
         this.setState({ error: error.errorMessage, loading: false });
         console.log("Error", error);
       });
